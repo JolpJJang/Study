@@ -6,13 +6,13 @@
 
 - 머신러닝은 x,y가 주어질 때, 기울기(가중치)와 절편을 구함.
 
-<img src="./images_3/untitled 0.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 0.png" width="50%" height="50%" />
 
 - 방정식 = 모델
     - 방정식을 세우면, 새로운 데이터에 대한 예측 가능
     - 아래 그림에서는 3번째 방정식이 적합한 모델
 
-<img src="./images_3/untitled 1.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 1.png" width="50%" height="50%" />
 
 ## 예시) 당뇨병 환자
 
@@ -31,7 +31,7 @@ diabetes = load_diabetes()  // Bunch 클래스
 print(diabetes.data.shape, diabetes.target.shape)  // (442, 10) (442,)
 ```
 
-<img src="./images_3/untitled 2.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 2.png" width="50%" height="50%" />
 
 샘플과 특성
 
@@ -66,7 +66,7 @@ plt.ylabel('y')
 plt.show()
 ```
 
-<img src="./images_3/untitled 3.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 3.png" width="50%" height="50%" />
 
 위 코드 시각화 결과
 
@@ -81,7 +81,7 @@ y = diabetes.target
 
 - 경사하강법으로 회귀식 찾기
 
-<img src="./images_3/untitled 4.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 4.png" width="50%" height="50%" />
 
 2번째 직선이 가장 적합한데 이를 경사하강법으로 찾을 수 있음.
 
@@ -90,7 +90,7 @@ y = diabetes.target
 - 두번째 식에서 x는 계수
 - 최적의 가중치와 절편을 찾아 예측값 찾기
 
-<img src="./images_3/untitled 5.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 5.png" width="50%" height="50%" />
 
 ### 훈련 데이터에 맞는 w와 b를 찾는 방법
 
@@ -144,7 +144,7 @@ print(y_hat_inc)
 - 식으로 확인해보니 변화율 = x[0]
 - 이걸보고 변화율이 양수인지 음수인지에 따라 w 조절 가능할까?
 
-<img src="./images_3/untitled 6.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 6.png" width="50%" height="50%" />
 
 - 코드
 
@@ -163,7 +163,7 @@ print(w_rate)
 - 이 문제에서는 w가 양수이고, w가 커질수록 예측값이 증가함.
     - 임의로 변화율을 더해주면서 w 키우기
 
-<img src="./images_3/untitled 7.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 7.png" width="50%" height="50%" />
 
 ```python
 w_new = w + w_rate
@@ -176,7 +176,7 @@ print(w_new)
 - 식으로 인해 b에 대한 변화율은 항상 1
     - → '새로운 b' = 기존 b + 1
 
-<img src="./images_3/untitled 8.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 8.png" width="50%" height="50%" />
 
 ### 이 방식의 문제점
 
@@ -233,7 +233,7 @@ for x_i, y_i in zip(x, y):
 print(w, b)
 ```
 
-<img src="./images_3/untitled 9.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 9.png" width="50%" height="50%" />
 
 ## 여러 에포크 반복
 
@@ -258,7 +258,7 @@ plt.ylabel('y')
 plt.show()
 ```
 
-<img src="./images_3/untitled 10.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 10.png" width="50%" height="50%" />
 
 ### 모델로 예측
 
@@ -276,7 +276,7 @@ plt.ylabel('y')
 plt.show()
 ```
 
-<img src="./images_3/untitled 11.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 11.png" width="50%" height="50%" />
 
 ## 3-3) 손실함수와 경사 하강법의 관계
 
@@ -291,7 +291,7 @@ plt.show()
 - (실제값-예측값)^2
 - 제곱을 하는 이유는 차이가 많이 날수록 가중치를 부가해 줄 수 있어서
 
-<img src="./images_3/untitled 12.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 12.png" width="50%" height="50%" />
 
 ### 손실 함수의 기울기를 찾기 위해 미분
 
@@ -299,19 +299,19 @@ plt.show()
 - 제곱오차에 대해 미분하여 얻은 식으로
     - 그레이디언트 = -(y-y^)x
 
-<img src="./images_3/untitled 13.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 13.png" width="50%" height="50%" />
 
 ### 미분 결과를 가중치에서 빼면 손실 함수의 낮은 쪽으로 이동
 
 - 앞서 직관으로 계산한 오차 역전파가 제곱 오차를 미분한 것과 결과 같음
 
-<img src="./images_3/untitled 14.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 14.png" width="50%" height="50%" />
 
 ## 절편에 대해 미분하고 업데이트하기
 
 - 절편 역시 미분하면 1이 나오고, 새로운 절편은 1*차이값
 
-<img src="./images_3/untitled 15.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 15.png" width="50%" height="50%" />
 
 ## 3-4) 선형 회귀로 뉴런 만들기
 
@@ -345,4 +345,4 @@ class Neuron:
 
 ### 역방향 계산 원리
 
-<img src="./images_3/untitled 16.png" width="50%" height="50%" />
+<img src="./images_3/Untitled 16.png" width="50%" height="50%" />
