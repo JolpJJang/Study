@@ -180,7 +180,7 @@ plt.ylabel('value')
 plt.show()
 ```
 
-![image](https://user-images.githubusercontent.com/47033052/105479577-f6a2d780-5ce7-11eb-9cf1-05ed3aa4fa5a.png) <img src="https://user-images.githubusercontent.com/47033052/105480481-256d7d80-5ce9-11eb-8939-3b89afcea9b3.png" alt="image" style="zoom: 33%;" />
+![image](https://user-images.githubusercontent.com/47033052/105479577-f6a2d780-5ce7-11eb-9cf1-05ed3aa4fa5a.png) <img src="https://user-images.githubusercontent.com/47033052/105480481-256d7d80-5ce9-11eb-8939-3b89afcea9b3.png" width="33%" />
 
 ### 타깃 데이터 확인 및 훈련 데이터 준비
 
