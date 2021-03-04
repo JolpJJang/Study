@@ -1,4 +1,4 @@
-## LeNet-5
+# LeNet-5
 ### Gradient-based learning applied to document recognition
 
 Yann Lecun et al 1998년 개발한 CNN 알고리즘
@@ -62,6 +62,8 @@ parameters: (입력개수 + 바이어스)*출력개수 = (120 + 1) x 84 = 10164
 
 - 7) 아웃풋 레이어
   - 10 유닛
+
+# AlexNet
 
 ---
 
