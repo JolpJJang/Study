@@ -5,13 +5,6 @@ from keras.layers import Input, Dense, Activation, Flatten, Conv2D, MaxPooling2D
 from keras.layers import ZeroPadding2D, AveragePooling2D, GlobalAveragePooling2D, BatchNormalization
 
 from keras.models import Model
-from keras.preprocessing import image
-import keras.backend as K
-from keras.applications.imagenet_utils import decode_predictions, preprocess_input
-from keras.engine.topology import get_source_inputs
-
-
-input = Input(shape=(224,224,3))
 
 
 def identity_block(input, filters, stage, block):
